@@ -1,0 +1,12 @@
+<div class="listado-posts">
+  <h3>Listado de Posts</h3>
+
+  <div *ngFor="let userId of groupPosts | keyvalue" class="author-section">
+    <h1>Autor ID: {{userId.key}}</h1>
+    <div *ngFor="let post of userId.value" class="post-card">
+      <h3>ID: {{post.id}}</h3>
+      <h4>{{post.title}}</h4>
+      <p>{{post.body}}</p>
+    </div>
+  </div>
+</div>
